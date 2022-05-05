@@ -1,10 +1,17 @@
 import { useState } from 'react';
 
-function Form() {
+function Form({ todos, setTodos }) {
 	const [formInput, setFormInput] = useState('');
+	const onFormSubmit = (e) => {
+		e.preventDefault();
+		if (formInput === '') return false;
+
+		setTodos([...todos, { id: todos.length, title: formInput }]);
+		console.log(formInput);
+	};
 	return (
 		<div>
-			<form>
+			<form onSubmit={onFormSubmit}>
 				<input
 					className='new-todo'
 					value={formInput}
