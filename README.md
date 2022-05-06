@@ -1,10 +1,10 @@
 # TODO APP
 
-This project was build with React
+This project was build with React.
 
 ## What Does It Provide
 
-You can easily add, delete, update, filter and list todos
+You can easily add, delete, update, filter and list todos.
 
 ![Screenshot](./public/ss.png)
 
@@ -18,4 +18,4 @@ If you run project, you have to write below command:
 And then open
 [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
+The page will reload when you make changes.
