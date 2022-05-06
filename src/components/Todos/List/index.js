@@ -22,7 +22,7 @@ function List({ todos, setTodos }) {
 					</div>
 				</li> */}
 				{todos.map((todo, i) => (
-					<li key={i}>
+					<li key={i} className={!todo.active && 'completed'}>
 						<div className='view'>
 							<input
 								className='toggle'
