@@ -5,6 +5,12 @@ function List({ todos, setTodos }) {
 		todos = todos.filter((todo, index) => index !== i);
 		setTodos([...todos]);
 	};
+	const updateTodo = (i) => {
+		todos = [...todos]; // important to create a copy, otherwise you'll modify state outside of setState call
+		todos[i] = { ...todos[i], active: !todos[i].active };
+		setTodos([...todos]);
+		console.log(todos[i]);
+	};
 	return (
 		<div>
 			<ul className='todo-list'>
@@ -18,7 +24,11 @@ function List({ todos, setTodos }) {
 				{todos.map((todo, i) => (
 					<li key={i}>
 						<div className='view'>
-							<input className='toggle' type='checkbox' />
+							<input
+								className='toggle'
+								type='checkbox'
+								onClick={() => updateTodo(i)}
+							/>
 							<label>{todo.title}</label>
 							<button className='destroy' onClick={() => removeTodo(i)} />
 						</div>

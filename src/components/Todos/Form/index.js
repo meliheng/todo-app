@@ -6,7 +6,7 @@ function Form({ todos, setTodos }) {
 		e.preventDefault();
 		if (formInput === '') return false;
 
-		setTodos([...todos, { id: todos.length, title: formInput }]);
+		setTodos([...todos, { id: todos.length, title: formInput, active: true }]);
 		console.log(formInput);
 	};
 	return (

@@ -3,7 +3,9 @@ import Form from './Form';
 import List from './List';
 
 function Todos() {
-	const [todos, setTodos] = useState([{ id: 1, title: 'learn react' }]);
+	const [todos, setTodos] = useState([
+		{ id: 1, title: 'learn react', active: true },
+	]);
 	return (
 		<div className='todoapp'>
 			<Form todos={todos} setTodos={setTodos} />
