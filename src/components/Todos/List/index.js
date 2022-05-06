@@ -1,6 +1,10 @@
 import React from 'react';
 import './styles.css';
-function List({ todos }) {
+function List({ todos, setTodos }) {
+	const removeTodo = (i) => {
+		todos = todos.filter((todo, index) => index !== i);
+		setTodos([...todos]);
+	};
 	return (
 		<div>
 			<ul className='todo-list'>
@@ -16,7 +20,7 @@ function List({ todos }) {
 						<div className='view'>
 							<input className='toggle' type='checkbox' />
 							<label>{todo.title}</label>
-							<button className='destroy'></button>
+							<button className='destroy' onClick={() => removeTodo(i)} />
 						</div>
 					</li>
 				))}

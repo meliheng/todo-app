@@ -7,7 +7,7 @@ function Todos() {
 	return (
 		<div className='todoapp'>
 			<Form todos={todos} setTodos={setTodos} />
-			<List todos={todos} />
+			<List todos={todos} setTodos={setTodos} />
 		</div>
 	);
 }
