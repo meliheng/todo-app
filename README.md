@@ -6,7 +6,7 @@ This project was build with React
 
 You can easily add, delete, update, filter and list todos
 
-![Screenshot] (./public/ss.png)
+![Screenshot](./public/ss.png)
 
 ## Available Scripts
 
