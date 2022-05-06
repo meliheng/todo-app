@@ -7,6 +7,7 @@ function Form({ todos, setTodos }) {
 		if (formInput === '') return false;
 
 		setTodos([...todos, { id: todos.length, title: formInput, active: true }]);
+		setFormInput('');
 		console.log(formInput);
 	};
 	return (
