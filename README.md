@@ -10,7 +10,6 @@ You can easily add, delete, update, filter and list todos.
 
 ## Available Scripts
 
-In the project directory, you can run:
 If you run project, you have to write below command:
 
 ### `npm start`
